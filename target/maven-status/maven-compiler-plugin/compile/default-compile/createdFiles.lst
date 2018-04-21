@@ -1,0 +1,15 @@
+edu\ou\cse\swlp\externalservices\SemanticSimilarityServiceClient.class
+edu\ou\cse\swlp\externalservices\IteBooksServiceClient.class
+edu\ou\cse\swlp\constants\ApplicationConstants.class
+edu\ou\cse\swlp\util\ServiceUtil.class
+edu\ou\cse\swlp\externalservices\YouTubeDataServiceClient.class
+edu\ou\cse\swlp\daoimpl\RelatedResourcesDAOImpl.class
+edu\ou\cse\swlp\beans\Media.class
+edu\ou\cse\swlp\controller\RelatedResourcesController.class
+edu\ou\cse\swlp\services\RelatedResourcesService.class
+edu\ou\cse\swlp\util\DBUtil.class
+edu\ou\cse\swlp\exception\WebApplicationException.class
+edu\ou\cse\swlp\util\ServiceUtil$1.class
+edu\ou\cse\swlp\constants\DBConstants.class
+edu\ou\cse\swlp\dao\RelatedResourcesDAO.class
+edu\ou\cse\swlp\externalservices\DBPediaLookupServiceClient.class
