@@ -36,10 +36,10 @@ public class RelatedResourcesService {
 		mediaLst = rrDao.fetchResources(tags);
 		
 		String concept = ApplicationConstants.EMPTY_STRING;
+		DBPediaLookupServiceClient dbPediaClient = new DBPediaLookupServiceClient();
+		concept = dbPediaClient.lookUpDBPediaConcept(tags);
+		
 		if(mediaLst.isEmpty()){
-			DBPediaLookupServiceClient dbPediaClient = new DBPediaLookupServiceClient();
-			concept = dbPediaClient.lookUpDBPediaConcept(tags);
-			
 			IteBooksServiceClient bookClient = new IteBooksServiceClient();
 			mediaLst.addAll(bookClient.getRelatedBooks(tags, concept));
 			

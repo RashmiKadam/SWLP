@@ -99,10 +99,11 @@ public class IteBooksServiceClient {
 	 * @return an ArrayList of Media objects
 	 */
 	public ArrayList<Media> getRelatedBooks(String keyword, String dbPediaConcept) {
-		ArrayList<Media> mediaLst = new ArrayList<>();
+		ArrayList<Media> mediaLst = new ArrayList<Media>();
 
 		mediaLst = searchBooks(keyword);
 		
+		mediaLst = ServiceUtil.filterList(mediaLst);
 		//If no DBpedia definition available for the tag, skip the Semantic Similarity
 		if(dbPediaConcept.equalsIgnoreCase("Skip")) {
 			return mediaLst;

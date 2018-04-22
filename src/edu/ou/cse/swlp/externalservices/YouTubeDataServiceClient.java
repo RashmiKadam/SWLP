@@ -106,6 +106,8 @@ public class YouTubeDataServiceClient {
 		try {
 			videoLst = getVideos(keyword);
 			
+			videoLst = ServiceUtil.filterList(videoLst);
+			
 			if(dbPediaConcept.equalsIgnoreCase("Skip")) {
 				return videoLst;
 			} else {

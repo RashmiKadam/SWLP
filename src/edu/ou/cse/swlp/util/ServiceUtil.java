@@ -6,6 +6,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -115,5 +116,19 @@ public class ServiceUtil {
 				}
 			}
 		});
+	}
+	
+	/**
+	 * This method limits the results returned from external API's.
+	 * @param mediaLst
+	 * @return modified ArrayList of Media Objects
+	 */
+	public static ArrayList<Media> filterList(ArrayList<Media> mediaLst){
+		ArrayList<Media> modifiedLst = new ArrayList<Media>();
+		int limit = Integer.parseInt(ApplicationConstants.MAX_RESULTS_LIMIT);
+		for (int i = 0; i < limit && i<= mediaLst.size(); i++) {
+			modifiedLst.add(mediaLst.get(i));
+		}
+		return modifiedLst;
 	}
 }

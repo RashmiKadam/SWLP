@@ -18,7 +18,7 @@ import edu.ou.cse.swlp.util.ServiceUtil;
 public class SemanticSimilarityServiceClient {
 	private String apiURL = "https://api.dandelion.eu/datatxt/";
 	private String serviceName = "sim/v1/?";
-	private String apiToken = "e4f853c0480b497d95b1290887f4ac14";//"0b905b07c43f445badd9e0b5f542d1aa";
+	private String apiToken = "312b6f6afa7f44889a30c4a666422367";//"e4f853c0480b497d95b1290887f4ac14";//"0b905b07c43f445badd9e0b5f542d1aa";
 
 	/**
 	 * This method invokes the Dandelion Semantic Similarity API
@@ -39,7 +39,7 @@ public class SemanticSimilarityServiceClient {
 				return "ServerError";
 			} else if(response != null){
 				responseObj =  (JSONObject) jsonParser.parse(response);
-				similarityValue = (String) responseObj.get("similarity");
+				similarityValue = responseObj.get("similarity").toString();
 			}
 		} catch (ParseException e) {
 			e.printStackTrace();

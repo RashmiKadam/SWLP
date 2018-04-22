@@ -9,6 +9,7 @@ package edu.ou.cse.swlp.constants;
  */
 public class ApplicationConstants {
 
+	public static String MAX_RESULTS_LIMIT = "5";
 	//API Key used for the service
 	public static String APPLICATION_REQUEST_KEY = "csi5510swlp";
 	//The request type supported
